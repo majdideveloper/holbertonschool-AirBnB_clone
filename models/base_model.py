@@ -38,7 +38,7 @@ class BaseModel():
         """
         
         self.__dict__['__class__'] = self.__class__.__name__
-        self.__dict__['update_at'] = self.update_at.isoformat()
+        self.__dict__['update_at'] = self.updated_at.isoformat()
         self.__dict__['id'] = str(uuid.uuid4())
         self.__dict__['created_at'] = self.created_at.isoformat()
 

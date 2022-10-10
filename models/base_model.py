@@ -30,7 +30,7 @@ class BaseModel():
         public instance methods 
         that updat the piblic instance
         """
-        self.update_at = datetime.now()
+        self.updated_at = datetime.now()
 
     def to_dict(self):
         """

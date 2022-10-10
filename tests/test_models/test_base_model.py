@@ -19,6 +19,15 @@ class Test_BaseModel(unittest.TestCase):
         id1 = BaseModel()
         id2 = BaseModel()
         self.assertNotEqual(id1.id, id2.id)
+    
+    def test_save(self):
+        """
+        test save 
+        """
+        save1 = BaseModel()
+        save2 = BaseModel()
+        self.assertEqual(save1.save(), save2.save())
+        
 
 if __name__ =='__main__':
     unittest.main()

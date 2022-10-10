@@ -12,7 +12,7 @@ from models.base_model import BaseModel
 
 class Test_BaseModel(unittest.TestCase):
     """
-    calss Test 
+    calss Test for Base Model 
     """
 
     def test_id(self):

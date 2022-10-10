@@ -11,13 +11,21 @@ class BaseModel():
     Class BaseModel that define all commun 
     attribute methods for other class
     """
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
-    
+        if kwargs: 
+            for k, v in kwargs.items():
+                if k == "created_at":
+                    self.created_at = datetime.strptime(v, '%Y-%m-%dT%H:%M:%S.%f')
+                elif k == "updated_at":
+                    self.updated_at =  datetime.strptime(v, '%Y-%m-%dT%H:%M:%S.%f')
 
    
+
+
+
 
     def __str__(self):
         """
@@ -36,7 +44,7 @@ class BaseModel():
         """
         returns a dictionary containing all keys/values 
         """
-        
+
         self.__dict__['__class__'] = self.__class__.__name__
         self.__dict__['updated_at'] = str(self.updated_at.isoformat())
         self.__dict__['id'] = str(uuid.uuid4())

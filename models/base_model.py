@@ -17,7 +17,9 @@ class BaseModel():
         self.updated_at = datetime.now()
         if kwargs: 
             for k, v in kwargs.items():
-                if k == "created_at":
+                if k == "id":
+                    self.id = str(v)
+                elif k == "created_at":
                     self.created_at = datetime.strptime(v, '%Y-%m-%dT%H:%M:%S.%f')
                 elif k == "updated_at":
                     self.updated_at =  datetime.strptime(v, '%Y-%m-%dT%H:%M:%S.%f')

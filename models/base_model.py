@@ -5,6 +5,8 @@ HBNB CLONE
 
 import uuid
 from datetime import datetime 
+import models
+
 
 class BaseModel():
     """
@@ -23,11 +25,10 @@ class BaseModel():
                     self.created_at = datetime.strptime(v, '%Y-%m-%dT%H:%M:%S.%f')
                 elif k == "updated_at":
                     self.updated_at =  datetime.strptime(v, '%Y-%m-%dT%H:%M:%S.%f')
+        else:
+            models.storage.new(self)
 
    
-
-
-
 
     def __str__(self):
         """

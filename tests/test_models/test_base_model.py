@@ -39,5 +39,16 @@ class Test_BaseModel(unittest.TestCase):
         sleep(0.1)
         bm2 = BaseModel()
         self.assertNotEqual(bm.to_dict(), bm2.to_dict())
+
+    def test___str__(self):
+        """
+        test str 
+        """
+        bm = BaseModel()
+        bm2 = BaseModel()
+        self.assertNotEqual(bm.__str__(), bm2.__str__())
+        
+
+
 if __name__ =='__main__':
     unittest.main()

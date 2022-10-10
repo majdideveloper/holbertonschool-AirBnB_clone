@@ -31,6 +31,13 @@ class Test_BaseModel(unittest.TestCase):
         bm.save()
         self.assertLess(update, bm.updated_at)
 
-
+    def test_to_dict(self):
+        """
+        test to dict
+        """
+        bm = BaseModel()
+        sleep(0.1)
+        bm2 = BaseModel()
+        self.assertNotEqual(bm.to_dict(), bm2.to_dict())
 if __name__ =='__main__':
     unittest.main()

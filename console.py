@@ -75,6 +75,32 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
             
 
+    def do_destory(self, arg):
+        """
+        Delete an instnce of Class Name
+        """
+        args = arg.split(" ")
+        if len(arg) == 0:
+            print("** class name missing **")
+            return
+        if args[0] not in self.classes:
+            print("** class doesn't exist **")
+            return
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+        elif len(args) == 2:
+            obj = "{}.{}".format(args[0], args[1])
+            if obj in storage.all():
+                storage.all().pop(obj)
+            else:
+                storage.save()
+
+    def do_all(self, arg):
+        """
+        Print all string represntation of all instance based 
+        or not in the class name
+        """
 
 
 

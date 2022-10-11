@@ -101,6 +101,17 @@ class HBNBCommand(cmd.Cmd):
         Print all string represntation of all instance based 
         or not in the class name
         """
+        args = arg.split()
+        if len(args) > 0 and args[0] not in self.classes:
+            print("** class doesn't exist **")
+        else:
+            str_list = []
+            for v in storage.all().values():
+                if len(args) > 0 and args[0] == v.__class__.__name__:
+                    str_list.append(v.__str__())
+                elif len(args) == 0:
+                    str_list.append(v.__str__())
+            print(str_list)
 
 
 

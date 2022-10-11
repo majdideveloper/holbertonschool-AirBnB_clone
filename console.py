@@ -6,6 +6,7 @@ HBNB CLONE
 import cmd
 
 
+
 class HBNBCommand(cmd.Cmd):
     """
 

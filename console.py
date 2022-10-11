@@ -73,7 +73,6 @@ class HBNBCommand(cmd.Cmd):
                     item_print = True
             if item_print == False:
                 print("** no instance found **")
-            #new_instance = eval("{}()".format(args[0]))
             
 
 

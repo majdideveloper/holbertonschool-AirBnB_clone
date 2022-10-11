@@ -42,6 +42,7 @@ class BaseModel():
         that updat the piblic instance
         """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """

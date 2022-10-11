@@ -4,8 +4,10 @@ HBNB CLONE
 """
 
 
-import json
 from models.base_model import BaseModel
+#from models.__init__ import storage
+import json
+import os.path
 
 class FileStorage:
     """
@@ -13,7 +15,7 @@ class FileStorage:
     and deserializes JSON file to instances:
     """
 
-    def __init__(self, file_path, objects):
+    def __init__(self, file_path="", objects=None):
         self.file_path = file_path
         self.objects = {}
 
@@ -55,16 +57,19 @@ class FileStorage:
         public instance that serializes
         objects to the json file
         """
-        fileName = self.__file_path
-
-        with open(fileName, "w") as jsonFile:
-            json.dump(self.__objects, fileName)
+        file_name = self.__file_path
+        if os.path.exists(file_name):
+            with open(file_name, "w") as jsonFile:
+                json.dump(self.__objects, file_name)
+   #     storage.save()
 
     def reload(self):
         """
         public instance that deserializes the json file
         """
-        fileName = self.__file_path
+        file_name = self.__file_path
+        if os.path.exists(file_name):
+            with open(file_name, "w") as jsonFile:
+                self.__objects = json.load(file_name)
 
-        with open(fileName, "w") as jsonFile:
-            self.__objects = json.load(fileName)
+

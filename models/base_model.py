@@ -28,7 +28,7 @@ class BaseModel():
         else:
             models.storage.new(self)
 
-   
+
 
     def __str__(self):
         """
@@ -42,11 +42,9 @@ class BaseModel():
         that updat the piblic instance
         """
         self.updated_at = datetime.now()
-
+        models.storage.save()
+    """
     def to_dict(self):
-        """
-        returns a dictionary containing all keys/values 
-        """
 
         self.__dict__['__class__'] = self.__class__.__name__
         self.__dict__['updated_at'] = str(self.updated_at.isoformat())
@@ -54,3 +52,14 @@ class BaseModel():
         self.__dict__['created_at'] = self.created_at.isoformat()
 
         return self.__dict__
+        """
+    def to_dict(self):
+        """Return the dictionary of the BaseModel instance.
+        Includes the key/value pair __class__ representing
+        the class name of the object.
+        """
+        Newdict = self.__dict__.copy()
+        Newdict["created_at"] = self.created_at.isoformat()
+        Newdict["updated_at"] = self.updated_at.isoformat()
+        Newdict["__class__"] = self.__class__.__name__
+        return Newdict

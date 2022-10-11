@@ -45,8 +45,17 @@ class Test_BaseModel(unittest.TestCase):
         bm.save()
         self.assertLess(update2, bm.updated_at)
 
+      def test_three_save(self):
+        """
+        test save if tow  
+        """
+        bm = BaseModel()
+        sleep(0.1)
+        update = bm.updated_at
+        bm.save()
+        self.assertEqual(update, datetime.utcnow())
 
-
+        
     def test_to_dict(self):
         """
         test to dict

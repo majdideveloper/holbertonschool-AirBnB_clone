@@ -44,16 +44,15 @@ class BaseModel():
         self.updated_at = datetime.now()
         models.storage.save()
 
-   """
+    """
     def to_dict(self):
-d
         self.__dict__['__class__'] = self.__class__.__name__
         self.__dict__['updated_at'] = str(self.updated_at.isoformat())
         self.__dict__['id'] = str(uuid.uuid4())
         self.__dict__['created_at'] = self.created_at.isoformat()
 
         return self.__dict__
-   """
+    """
     def to_dict(self):
         """Return the dictionary of the BaseModel instance.
         Includes the key/value pair __class__ representing

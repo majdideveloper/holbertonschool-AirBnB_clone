@@ -31,6 +31,22 @@ class Test_BaseModel(unittest.TestCase):
         bm.save()
         self.assertLess(update, bm.updated_at)
 
+    def test_tow_save(self):
+        """
+        test save if tow  
+        """
+        bm = BaseModel()
+        sleep(0.1)
+        update = bm.updated_at
+        bm.save()
+        update2 = bm.updated_at
+        self.assertLess(update, bm.updated_at)
+        sleep(0.1)
+        bm.save()
+        self.assertLess(update2, bm.updated_at)
+
+
+
     def test_to_dict(self):
         """
         test to dict

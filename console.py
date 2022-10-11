@@ -48,6 +48,34 @@ class HBNBCommand(cmd.Cmd):
             new_instance.save()
             print(new_instance.id)
 
+    def do_show(self, arg):
+        """
+        show a new instnce of base model
+        """
+        args = arg.split(" ")
+        if len(arg) == 0:
+            print("** class name missing **")
+            return
+        if args[0] not in self.classes:
+            print("** class doesn't exist **")
+            return
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+        else:
+            all_obj = storage.all()
+            item_print = False
+            for k, v in all_obj.items():
+                id_obj = k.split('.')[1]
+                if id_obj == args[1]:
+                    obj = v
+                    print(obj)
+                    item_print = True
+            if item_print == False:
+                print("** no instance found **")
+            #new_instance = eval("{}()".format(args[0]))
+            
+
 
 
 

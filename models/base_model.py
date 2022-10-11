@@ -52,7 +52,7 @@ class BaseModel():
         self.__dict__['created_at'] = self.created_at.isoformat()
 
         return self.__dict__
-        """
+    """
     def to_dict(self):
         """Return the dictionary of the BaseModel instance.
         Includes the key/value pair __class__ representing

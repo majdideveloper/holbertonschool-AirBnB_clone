@@ -131,7 +131,6 @@ class HBNBCommand(cmd.Cmd):
             return
    
 
-
     # ----- record and playback -----
     def close(self):
         if self.file:

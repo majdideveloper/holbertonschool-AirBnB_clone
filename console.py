@@ -16,7 +16,7 @@ class HBNBCommand(cmd.Cmd):
     intro = ''
     prompt = '(hbnb) '
     file = None
-    classes = ["BaseModel"]
+    classes = ["BaseModel", "Class"]
 
     def do_quit(self, arg):
         """Quit command to exit the program\n"""
@@ -44,7 +44,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
         else:
-            new_instance = eval("{}{}".format(args[0]))
+            new_instance = eval("{}()".format(args[0]))
             new_instance.save()
             print(new_instance.id)
 

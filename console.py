@@ -11,7 +11,7 @@ import sys
 
 class HBNBCommand(cmd.Cmd):
     """
-
+    class hbnb
     """
     intro = ''
     prompt = '(hbnb) '

@@ -112,7 +112,24 @@ class HBNBCommand(cmd.Cmd):
                 elif len(args) == 0:
                     str_list.append(v.__str__())
             print(str_list)
+    
 
+
+    def do_update(self, arg):
+        """
+        Update an instnce of Class Name
+        """
+        args = arg.split(" ")
+        if len(arg) == 0:
+            print("** class name missing **")
+            return
+        if args[0] not in self.classes:
+            print("** class doesn't exist **")
+            return
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+   
 
 
     # ----- record and playback -----

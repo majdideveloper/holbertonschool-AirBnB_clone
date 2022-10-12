@@ -22,6 +22,7 @@ class HBNBCommand(cmd.Cmd):
     file = None
     classes = ["BaseModel", "User"]
 
+
     def do_quit(self, arg):
         """Quit command to exit the program\n"""
         self.close()

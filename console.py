@@ -19,7 +19,13 @@ class HBNBCommand(cmd.Cmd):
     intro = ''
     prompt = '(hbnb) '
     file = None
-    classes = ["BaseModel", "User"]
+    classes = ["BaseModel",
+            "User",
+            "State",
+            "City",
+            "Amenity",
+            "Place",
+            "Review"]
 
 
     def do_quit(self, arg):

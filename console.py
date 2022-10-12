@@ -159,8 +159,7 @@ class HBNBCommand(cmd.Cmd):
             for k, v in all_obj.items():
                 if obj == k:
                     update_item = True
-            if update_item == True:
-                """
+                    """
                     new_dict = v.to_dict()
                     print(type(new_dict))
                     new_dict[args[2]] = args[3]
@@ -168,12 +167,13 @@ class HBNBCommand(cmd.Cmd):
                     new_dict = BaseModel(new_dict)
                     bint(new_dict)
                     models.storage.save()
-                """
-                setattr(all_obj[obj], args[2], args[3])
-                my_new_obj= all_obj[obj]
-                my_new_obj.updated_at = datetime.now()
-                storage.save()
-            else:
+                    """
+                    setattr(all_obj[obj], args[2], args[3])
+                    my_new_obj= all_obj[obj]
+                    my_new_obj.updated_at = datetime.now()
+                    storage.save()
+
+            if update_item == False:
                 print("** no instance found **")
                 
     # ----- record and playback -----

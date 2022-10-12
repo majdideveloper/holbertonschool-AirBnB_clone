@@ -9,6 +9,7 @@ from models.user import User
 import json
 import os.path
 
+
 class FileStorage:
     """
     class FileStorage that serializes instances to a JSON file

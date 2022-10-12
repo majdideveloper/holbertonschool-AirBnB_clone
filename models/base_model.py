@@ -1,44 +1,46 @@
 #!/usr/bin/python3
 """
-HBNB CLONE
+hbnb clone
 """
 
 import uuid
-from datetime import datetime 
+from datetime import datetime
 import models
 
 
 class BaseModel():
     """
-    Class BaseModel that define all commun 
+    Class BaseModel that define all commun
     attribute methods for other class
     """
+
     def __init__(self, *args, **kwargs):
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
-        if kwargs: 
+        if kwargs:
             for k, v in kwargs.items():
                 if k == "id":
                     self.id = str(v)
                 elif k == "created_at":
-                    self.created_at = datetime.strptime(v, '%Y-%m-%dT%H:%M:%S.%f')
+                    self.created_at = datetime.strptime(
+                        v, '%Y-%m-%dT%H:%M:%S.%f')
                 elif k == "updated_at":
-                    self.updated_at =  datetime.strptime(v, '%Y-%m-%dT%H:%M:%S.%f')
+                    self.updated_at = datetime.strptime(
+                        v, '%Y-%m-%dT%H:%M:%S.%f')
         else:
             models.storage.new(self)
-
-   
 
     def __str__(self):
         """
         print
         """
-        return "[{}] ({}) {}". format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}". format(
+            self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """
-        public instance methods 
+        public instance methods
         that updat the piblic instance
         """
         self.updated_at = datetime.now()
@@ -53,6 +55,7 @@ class BaseModel():
 
         return self.__dict__
     """
+
     def to_dict(self):
         """Return the dictionary of the BaseModel instance.
         Includes the key/value pair __class__ representing

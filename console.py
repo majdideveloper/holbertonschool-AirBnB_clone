@@ -103,6 +103,10 @@ class HBNBCommand(cmd.Cmd):
             if delete_item == True:
                 del all_obj[obj]        
                 storage.save() 
+            else:
+                print("** no instance found **")
+
+                
 
 
 
@@ -114,7 +118,6 @@ class HBNBCommand(cmd.Cmd):
         Print all string represntation of all instance based 
         or not in the class name
         """
-        """
         args = arg.split()
         if len(args) > 0 and args[0] not in self.classes:
             print("** class doesn't exist **")
@@ -124,20 +127,6 @@ class HBNBCommand(cmd.Cmd):
                 if len(args) > 0 and args[0] == v.__class__.__name__:
                     str_list.append(v.__str__())
                 elif len(args) == 0:
-                    str_list.append(v.__str__())
-            print(str_list)
-        """
-        args = arg.split(" ")
-        if len(arg) == 0:
-            print("** class name missing **")
-            return
-        if args[0] not in self.classes:
-            print("** class doesn't exist **")
-            return
-        else:
-            str_list = []
-            for v in storage.all().values():
-                if args[0] == v.__class__.__name__:
                     str_list.append(v.__str__())
             print(str_list)
 
@@ -167,5 +156,11 @@ class HBNBCommand(cmd.Cmd):
         if self.file:
             self.file.close()
             self.file = None
+
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
+
+
+
 
 

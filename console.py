@@ -109,7 +109,6 @@ class HBNBCommand(cmd.Cmd):
 
 
 
-
     def do_all(self, arg):
         """
         Print all string represntation of all instance based 
@@ -161,8 +160,6 @@ class HBNBCommand(cmd.Cmd):
                 if obj == k:
                     update_item = True
                     setattr(all_obj[obj], args[2], args[3])
-                    
-
             if update_item == True:
                 """
                     new_dict = v.to_dict()
@@ -172,15 +169,14 @@ class HBNBCommand(cmd.Cmd):
                     new_dict = BaseModel(new_dict)
                     bint(new_dict)
                     models.storage.save()
+
                 """
-                
                 #my_new_obj= all_obj[obj]
                 #my_new_obj.updated_at = datetime.now()
                 storage.save()
             else:
                 print("** no instance found **")
                 
-
     # ----- record and playback -----
     def close(self):
         if self.file:

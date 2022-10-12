@@ -96,6 +96,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()"""
             obj = "{}.{}".format(args[0], args[1])
             all_obj = storage.all()
+            delete_item = False
             for k in all_obj.keys():
                 if obj == k:
                     delete_item = True
@@ -168,5 +169,3 @@ class HBNBCommand(cmd.Cmd):
             self.file = None
 
 
-if __name__ == '__main__':
-    HBNBCommand().cmdloop()

@@ -96,10 +96,12 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()"""
             obj = "{}.{}".format(args[0], args[1])
             all_obj = storage.all()
-            for k, v in all_obj.items():
+            for k in all_obj.keys():
                 if obj == k:
-                    del all_obj[k]
-            storage.save() 
+                    delete_item = True
+            if delete_item == True:
+                del all_obj[obj]        
+                storage.save() 
 
 
 

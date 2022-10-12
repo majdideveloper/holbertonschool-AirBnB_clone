@@ -78,10 +78,11 @@ class HBNBCommand(cmd.Cmd):
             return
         else:
             all_obj = storage.all()
+            id_obj = "{}.{}".format(args[0], args[1])
             item_print = False
             for k, v in all_obj.items():
-                id_obj = k.split('.')[1]
-                if id_obj == args[1]:
+                
+                if id_obj == k:
                     obj = v
                     print(obj)
                     item_print = True

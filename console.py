@@ -110,7 +110,6 @@ class HBNBCommand(cmd.Cmd):
 
 
 
-
     def do_all(self, arg):
         """
         Print all string represntation of all instance based 
@@ -177,7 +176,6 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
                 
-
     # ----- record and playback -----
     def close(self):
         if self.file:

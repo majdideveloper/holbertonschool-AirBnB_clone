@@ -12,5 +12,5 @@ from models.base_model import BaseModel
 
 class Test_User(unittest.TestCase):
     """
-    calss Test for Base Model 
+    calss Test for User 
     """

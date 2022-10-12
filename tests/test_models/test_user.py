@@ -3,20 +3,18 @@
 uinitest for the User
 """
 
-import unittest
-import uuid
+from models.user import User
 from datetime import datetime
 from time import sleep
-
-from models.base_model import BaseModel
+import unittest
+import uuid
 
 class Test_User(unittest.TestCase):
     """
     calss Test for Base Model 
     """
-    def inst_user(self):
+    def test_user(self):
         c_user = User()
-        c_user.email = "5002@holbertonstudents.com"
-        c_user.password ="passWord"
-        c_user.first_name ="Hana"
-        c_user.last_name = "Ouerghemmi"
+        c_user.email = "hana"
+        msg = "hana"
+        self.assertTrue(c_user.email, msg)

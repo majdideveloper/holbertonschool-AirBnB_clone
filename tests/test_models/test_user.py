@@ -15,8 +15,15 @@ class Test_User(unittest.TestCase):
     """
     calss Test for User 
     """
-    def test_user(self):
-        c_user = User()
-        c_user.email = "hana"
-        msg = "hana"
-        self.assertTrue(c_user.email, msg)
+     
+    def test_email_is_public_str(self):
+        self.assertEqual(str, type(User.email))
+
+    def test_password_is_public_str(self):
+        self.assertEqual(str, type(User.password))
+
+    def test_first_name_is_public_str(self):
+        self.assertEqual(str, type(User.first_name))
+
+    def test_last_name_is_public_str(self):
+        self.assertEqual(str, type(User.last_name)) 

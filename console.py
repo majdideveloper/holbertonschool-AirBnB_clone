@@ -3,8 +3,8 @@
 HBNB CLONE
 """
 
-from datetime import datetime 
-from models.base_model import BaseModel 
+from datetime import datetime
+from models.base_model import BaseModel
 from models.user import User
 from models import storage
 import cmd
@@ -20,27 +20,26 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
     file = None
     classes = ["BaseModel",
-            "User",
-            "State",
-            "City",
-            "Amenity",
-            "Place",
-            "Review"]
-
+               "User",
+               "State",
+               "City",
+               "Amenity",
+               "Place",
+               "Review"]
 
     def do_quit(self, arg):
         """Quit command to exit the program\n"""
         self.close()
         quit()
-        return True 
+        return True
 
     def do_EOF(self, arg):
         """EOF command to exit the program\n"""
         self.close()
         return True
+
     def emptyline(self):
         pass
-
 
     def do_create(self, arg):
         """
@@ -81,7 +80,7 @@ class HBNBCommand(cmd.Cmd):
                     obj = v
                     print(obj)
                     item_print = True
-            if item_print == False:
+            if not item_print:
                 print("** no instance found **")
 
     def do_destroy(self, arg):
@@ -109,17 +108,15 @@ class HBNBCommand(cmd.Cmd):
             for k in all_obj.keys():
                 if obj == k:
                     delete_item = True
-            if delete_item == True:
-                del all_obj[obj]        
-                storage.save() 
+            if delete_item:
+                del all_obj[obj]
+                storage.save()
             else:
                 print("** no instance found **")
 
-
-
     def do_all(self, arg):
         """
-        Print all string represntation of all instance based 
+        Print all string represntation of all instance based
         or not in the class name
         """
         args = arg.split()
@@ -136,7 +133,6 @@ class HBNBCommand(cmd.Cmd):
                     print(str_list)
                 else:
                     print("** no instance found **")
-
 
     def do_update(self, arg):
         """
@@ -168,7 +164,7 @@ class HBNBCommand(cmd.Cmd):
                 if obj == k:
                     update_item = True
                     setattr(all_obj[obj], args[2], args[3])
-            if update_item == True:
+            if update_item:
                 """
                     new_dict = v.to_dict()
                     print(type(new_dict))
@@ -184,12 +180,13 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
             else:
                 print("** no instance found **")
-                
+
     # ----- record and playback -----
     def close(self):
         if self.file:
             self.file.close()
             self.file = None
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

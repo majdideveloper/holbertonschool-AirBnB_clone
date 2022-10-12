@@ -15,7 +15,8 @@ class Test_User(unittest.TestCase):
     """
     calss Test for User 
     """
-     
+
+
     def test_email_is_public_str(self):
         self.assertEqual(str, type(User.email))
 

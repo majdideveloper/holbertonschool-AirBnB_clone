@@ -90,16 +90,27 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
             return
         elif len(args) == 2:
-            obj = "{}.{}".format(args[0], args[1])
+            """obj = "{}.{}".format(args[0], args[1])
             if obj in storage.all():
                 storage.all().pop(obj)
-            else:
-                storage.save()
+                storage.save()"""
+            obj = "{}.{}".format(args[0], args[1])
+            all_obj = storage.all()
+            for k, v in all_obj.items():
+                if obj == k:
+                    del all_obj[k]
+            storage.save() 
+
+
+
+
+
 
     def do_all(self, arg):
         """
         Print all string represntation of all instance based 
         or not in the class name
+        """
         """
         args = arg.split()
         if len(args) > 0 and args[0] not in self.classes:
@@ -112,6 +123,23 @@ class HBNBCommand(cmd.Cmd):
                 elif len(args) == 0:
                     str_list.append(v.__str__())
             print(str_list)
+        """
+        args = arg.split(" ")
+        if len(arg) == 0:
+            print("** class name missing **")
+            return
+        if args[0] not in self.classes:
+            print("** class doesn't exist **")
+            return
+        else:
+            str_list = []
+            for v in storage.all().values():
+                if args[0] == v.__class__.__name__:
+                    str_list.append(v.__str__())
+            print(str_list)
+
+
+            
     
 
 

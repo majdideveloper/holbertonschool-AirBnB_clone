@@ -5,6 +5,7 @@ HBNB CLONE
 
 from datetime import datetime 
 from models.base_model import BaseModel 
+from models.user import User
 from models import storage
 import cmd
 import sys
@@ -19,7 +20,7 @@ class HBNBCommand(cmd.Cmd):
     intro = ''
     prompt = '(hbnb) '
     file = None
-    classes = ["BaseModel", "Class"]
+    classes = ["BaseModel", "User"]
 
     def do_quit(self, arg):
         """Quit command to exit the program\n"""

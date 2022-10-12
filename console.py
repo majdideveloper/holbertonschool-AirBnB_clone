@@ -85,8 +85,9 @@ class HBNBCommand(cmd.Cmd):
                     obj = v
                     print(obj)
                     item_print = True
-            #if  item_print == False:
-                #print("** no instance found **")
+                    return
+            if  item_print == False:
+                print("** no instance found **")
 
     def do_destroy(self, arg):
         """

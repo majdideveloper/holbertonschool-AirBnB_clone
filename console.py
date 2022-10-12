@@ -3,10 +3,13 @@
 HBNB CLONE
 """
 
+from datetime import datetime 
 from models.base_model import BaseModel 
 from models import storage
 import cmd
 import sys
+import models
+
 
 
 class HBNBCommand(cmd.Cmd):
@@ -31,7 +34,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         pass
 
-    
+
     def do_create(self, arg):
         """
         create  a new instnce of base model
@@ -73,7 +76,6 @@ class HBNBCommand(cmd.Cmd):
                     item_print = True
             if item_print == False:
                 print("** no instance found **")
-            
 
     def do_destroy(self, arg):
         """
@@ -106,8 +108,6 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
 
-                
-
 
 
 
@@ -126,11 +126,9 @@ class HBNBCommand(cmd.Cmd):
                     str_list.append(v.__str__())
                 elif len(args) == 0:
                     str_list.append(v.__str__())
-            print(str_list)
-
-
-            
-    
+                    print(str_list)
+                else:
+                    print("** no instance found **")
 
 
     def do_update(self, arg):
@@ -147,7 +145,38 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 1:
             print("** instance id missing **")
             return
-   
+        if len(args) == 2:
+            print("** attribute name missing **")
+            return
+        if len(args) == 3:
+            print("** value missing **")
+            return
+        if len(args) > 4:
+            return
+        else:
+            obj = "{}.{}".format(args[0], args[1])
+            all_obj = storage.all()
+            update_item = False
+            for k, v in all_obj.items():
+                if obj == k:
+                    update_item = True
+            if update_item == True:
+                """
+                    new_dict = v.to_dict()
+                    print(type(new_dict))
+                    new_dict[args[2]] = args[3]
+                    print(new_dict)
+                    new_dict = BaseModel(new_dict)
+                    bint(new_dict)
+                    models.storage.save()
+                """
+                setattr(all_obj[obj], args[2], args[3])
+                my_new_obj= all_obj[obj]
+                my_new_obj.updated_at = datetime.now()
+                storage.save()
+            else:
+                print("** no instance found **")
+                
 
     # ----- record and playback -----
     def close(self):
@@ -157,8 +186,3 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
-
-
-
-
-

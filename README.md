@@ -103,7 +103,14 @@ To use the command interpreter hbnb in an interactive mode:
 ## 🛠️  Compilation and testing
 
 ```{r mon_bloc, echo = FALSE, WARNING = TRUE}
-./console
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  all  create  destroy  help  quit  show  update
+
+(hbnb)
 
 ``` 
 
@@ -111,7 +118,7 @@ To use the command interpreter hbnb in an interactive mode:
 
 #### 🔧 We are testing  via:
 ```{r mon_bloc, echo = FALSE, WARNING = TRUE}
-i:~/AirBnB $ python3 -m unittest tests/test_models/test_base_model.py
+$ python3 -m unittest tests/test_models/test_base_model.py
 
 ...................................................................................
 ...................................................................................
@@ -124,6 +131,9 @@ OK
 ```
 
 ### 🎥 EXEMPLE/ Usage
+ 
+ <img src ="https://media.giphy.com/media/bVCIRlSPmpxt0IgF4S/giphy.gif"/>
+
 
 ## 📂What our file stand for:
 

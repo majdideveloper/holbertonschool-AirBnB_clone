@@ -21,11 +21,9 @@ class FileStorage:
     and deserializes JSON file to instances:
     """
 
-
     __file_path = "file.json"
     __objects = {}
 
-    
     def all(self):
         """
         public instance that returns the dictionary objects
@@ -57,7 +55,7 @@ class FileStorage:
             new_dict[k] = v.to_dict()
         with open(self.__file_path, "w", encoding="UTF-8") as f:
             json.dump(new_dict, f)
-  
+ 
     def reload(self):
         """
         deserializes the JSON file to __objects

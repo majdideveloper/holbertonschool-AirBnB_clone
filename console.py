@@ -81,13 +81,12 @@ class HBNBCommand(cmd.Cmd):
             id_obj = "{}.{}".format(args[0], args[1])
             item_print = False
             for k, v in all_obj.items():
-                
                 if id_obj == k:
                     obj = v
                     print(obj)
                     item_print = True
                     return
-            if  item_print == False:
+            if item_print is False:
                 print("** no instance found **")
 
     def do_destroy(self, arg):
@@ -180,11 +179,11 @@ class HBNBCommand(cmd.Cmd):
                     new_dict = BaseModel(new_dict)
                     bint(new_dict)
                     models.storage.save()
-
+                    my_new_obj= all_obj[obj]
+                    my_new_obj.updated_at = datetime.now()
+                
                 """
-                #my_new_obj= all_obj[obj]
-                #my_new_obj.updated_at = datetime.now()
-                storage.save()
+               storage.save()
             else:
                 print("** no instance found **")
 

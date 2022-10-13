@@ -5,8 +5,7 @@
 	<b><i>HOLBERTON SCHOOL AirBnB clone - The console</i></b><br>
 </p>
 <p align="center">
-	<img alt="HBNB" src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T183534Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=eb102b2bc9818888486dd17244f5b35443a34e6a7b7faac74496db33c4e5c077" width ="400" height="200"/>
-
+ <img alt="aitBnB" src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T183534Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=eb102b2bc9818888486dd17244f5b35443a34e6a7b7faac74496db33c4e5c077" height="200" width="400"/> 
 </p>
 <h3 align="center">
 	<a href="##Description">Description</a>
@@ -42,22 +41,22 @@ The console is a command line interpreter that allow to manage of the backend of
 
  <h3 align="center"> How to Use Command </h3>
 ---
-| Commands | Usage | Description |
-| --------- | --------------------------------------------- | ------------------------------------------ |
-| `help` | ```help ``` | displays all commands |
-| `create` | ```create < class >``` | creates new object |
-| `update` | ``` update < class > <id> <attribute> <value>``` | updates attribute of an object |
-| `destroy` | ```destroy < class > <id>```| destroys specified object |
-| `show` | ``` show < class > <id> ``` | show an object from a file, a database |
-| `all` | ``` all < class > ```  |display all objects in class |
-| `quit` | ``` quit ``` | exits |
-| `EOF` | ```  ``` | exits |
+| Commands  | Usage                                            | Description                                |
+| --------- | ------------------------------------------------ | ------------------------------------------ |
+| `help`    | ```help ```                                      | displays all commands                      |
+| `create`  | ```create < class >```                           | creates new object                         |
+| `update`  | ``` update < class > <id> <attribute> <value>``` | updates attribute of an object             |
+| `destroy` | ```destroy < class > <id>```                     | destroys specified object                  |
+| `show`    | ``` show < class > <id> ```                      | show an object from a file, a database     |
+| `all`     | ``` all < class > ```                            |display all objects in class                |
+| `quit`    | ``` quit ```                                     | exits                                      |
+| `EOF`     | ```  ```                                         | exits                                      |
 	
 ##  🛠️ Installation
 To use HBnB clone console you need to:
 
 ```{r mon_bloc, echo = FALSE, WARNING = TRUE}
-git clone .
+git clone https://github.com/majdideveloper/holbertonschool-AirBnB_clone.git
 ```
 To use the command interpreter hbnb in an interactive mode:
 ```{r mon_bloc, echo = FALSE, WARNING = TRUE}
@@ -75,6 +74,7 @@ To use the command interpreter hbnb in an interactive mode:
 
 ## 📂What our file stand for:
 
+<div>
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
@@ -186,6 +186,8 @@ To use the command interpreter hbnb in an interactive mode:
 </tbody>
 </table>
  
+ </div>
+
 ## :octocat: Authors:
 
 * [Majdi Aribi](https://github.com/majdideveloper)

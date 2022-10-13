@@ -19,12 +19,12 @@
 
 ##   <img alt="aitBnB" src="https://cdn.icon-icons.com/icons2/836/PNG/512/Airbnb_icon-icons.com_66791.png" height="30"/> AirBnB clone - The console:
 
-In our Holberton school group project pair programing we work on making a `AirBnB-Console0.1`
+In our Holberton school group project pair programing we work on making a `AirBnB Clone The-Console 0.1`
 
 ## 📖 Description: 
  
 <p>
-`HolbertonBnB` is a complete web application, integrating database storage, a back-end API, and front-end interfacing in a clone of AirBnB.
+HBnB` is a complete web application, integrating database storage, a back-end API, and front-end interfacing in a clone of AirBnB.
 
 The project currently only implements the back-end console.
 </p>

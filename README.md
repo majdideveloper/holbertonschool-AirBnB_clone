@@ -57,36 +57,36 @@ The console is a command line interpreter that allow to manage of the backend of
 </tr>
 <tr>
 	
-	<td> `update`  </td>
-	<td> ``` update < class > <id> <attribute> <value>``` </td> 
+	<td> update  </td>
+	<td> update < class > <id> <attribute> <value> </td> 
 	<td> updates attribute of an object </td>|
 </tr>
 
 <tr>
-	<td> `destroy` </td> 
-	<td> ```destroy < class > <id>```  </td>    
+	<td> destroy </td> 
+	<td> destroy < class > <id>  </td>    
 	<td> destroys specified object </td>
 </tr>
 
 <tr>
-	<td> `show` </td>   
-	<td> ``` show < class > <id> ``` </td>
+	<td> show </td>   
+	<td>  show < class > <id> </td>
 	<td> show an object from a file, a database </td>
 </tr>
 
 <tr>
-	<td> `all`  </td>
-	<td> ``` all < class > ```</td>
+	<td> all  </td>
+	<td> all < class > </td>
 	<td> display all objects in class </td> 
 </tr>
 
 <tr>
-	<td> `quit`  </td>
-	<td> ``` quit ``` </td>
+	<td> quit </td>
+	<td>  quit  </td>
 	<td>  exits </td>
 </tr>
-	<td> `EOF` </td>     
-	<td> ```  ``` </td>
+	<td> EOF </td>     
+	<td>  </td>
 	<td> exits </td>                                  
 <tr>
 	

@@ -46,13 +46,13 @@ The console is a command line interpreter that allow to manage of the backend of
 <th> Commands </th> <th> Usage </th> <th> Description </th>
 </tr>
 <tr>
-	 <td> `help`</td>
-	 <td>```help ```</td>
+	 <td> help</td>
+	 <td>help </td>
 	 <td> displays all commands </td>
 </tr>
 <tr>
-	<td> `create` </td> 
-	<td> ```create < class >```</td>
+	<td> create </td> 
+	<td> create < class ></td>
 	<td> creates new object   </td> 
 </tr>
 <tr>

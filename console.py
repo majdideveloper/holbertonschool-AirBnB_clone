@@ -181,9 +181,8 @@ class HBNBCommand(cmd.Cmd):
                     models.storage.save()
                     my_new_obj= all_obj[obj]
                     my_new_obj.updated_at = datetime.now()
-                
                 """
-               storage.save()
+                storage.save()
             else:
                 print("** no instance found **")
 

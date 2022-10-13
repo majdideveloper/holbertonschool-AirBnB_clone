@@ -42,7 +42,7 @@ The console is a command line interpreter that allow to manage of the backend of
  <h3 align="center"> How to Use Command </h3>
 ---
 | Commands  | Usage                                            | Description                                |
-| --------- | ------------------------------------------------ | ------------------------------------------ |
+|: -------- | :----------------------------------------------- | ------------------------------------------:|
 | `help`    | ```help ```                                      | displays all commands                      |
 | `create`  | ```create < class >```                           | creates new object                         |
 | `update`  | ``` update < class > <id> <attribute> <value>``` | updates attribute of an object             |
@@ -76,20 +76,6 @@ To use the command interpreter hbnb in an interactive mode:
 
 <div>
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
-.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-oqs5{background-color:#f9f9f9;border-color:#ffffff;text-align:left;vertical-align:top}
-.tg .tg-zg5n{border-color:#ffffff;color:#000000;font-size:16px;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-zylj{border-color:#ffffff;color:#000000;font-size:16px;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-vw9p{background-color:#f9f9f9;border-color:#ffffff;font-size:14px;text-align:left;vertical-align:top}
-.tg .tg-dvqx{background-color:#f9f9f9;border-color:#ffffff;text-align:center;vertical-align:top}
-.tg .tg-2t70{border-color:#ffffff;font-size:14px;text-align:center;vertical-align:top}
-.tg .tg-ysfy{border-color:#ffffff;font-size:14px;text-align:left;vertical-align:top}
-</style>
 <table class="tg" style="undefined;table-layout: fixed; width: 821px">
 <colgroup>
 <col style="width: 113px">

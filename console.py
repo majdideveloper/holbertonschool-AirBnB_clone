@@ -4,6 +4,7 @@ HBNB CLONE
 """
 
 from datetime import datetime
+from pickle import FALSE
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -104,10 +105,6 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
             return
         elif len(args) == 2:
-            """obj = "{}.{}".format(args[0], args[1])
-            if obj in storage.all():
-                storage.all().pop(obj)
-                storage.save()"""
             obj = "{}.{}".format(args[0], args[1])
             all_obj = storage.all()
             delete_item = False
@@ -130,15 +127,18 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             str_list = []
+            verfy_all = False
             for v in storage.all().values():
                 if len(args) > 0 and args[0] == v.__class__.__name__:
                     str_list.append(v.__str__())
-                    print(str_list)
-                elif len(args) == 0:
+                    verfy_all = True
+                elif len(arg) == 0:
                     str_list.append(v.__str__())
-                    print(str_list)
-                else:
-                    print("** no instance found **")
+                    verfy_all = True
+            if verfy_all:
+                print(str_list)
+            else:
+                print("** no instance found **")
 
     def do_update(self, arg):
         """
@@ -171,22 +171,10 @@ class HBNBCommand(cmd.Cmd):
                     update_item = True
                     setattr(all_obj[obj], args[2], args[3])
             if update_item:
-                """
-                    new_dict = v.to_dict()
-                    print(type(new_dict))
-                    new_dict[args[2]] = args[3]
-                    print(new_dict)
-                    new_dict = BaseModel(new_dict)
-                    bint(new_dict)
-                    models.storage.save()
-                    my_new_obj= all_obj[obj]
-                    my_new_obj.updated_at = datetime.now()
-                """
                 storage.save()
             else:
                 print("** no instance found **")
 
-    # ----- record and playback -----
     def close(self):
         if self.file:
             self.file.close()

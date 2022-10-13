@@ -36,16 +36,7 @@ class FileStorage:
         objects the obj with key
         """
         self.__objects["{}.{}".format(obj.__class__.__name__, obj.id)] = obj
-    """
-    def save(self):
-        public instance that serializes
-        objects to the json file
-        odict = FileStorage.__objects
-        objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
-        #  if os.path.exists(FileStorage.__file_path):
-        with open(FileStorage.__file_path, "w") as f:
-                json.dump(objdict, f)
-    """
+
     def save(self):
         """
         serializes __objects to the JSON file (path: __file_path)

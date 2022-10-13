@@ -21,13 +21,11 @@ class FileStorage:
     and deserializes JSON file to instances:
     """
 
-   
 
     __file_path = "file.json"
     __objects = {}
 
     
-
     def all(self):
         """
         public instance that returns the dictionary objects
@@ -42,10 +40,8 @@ class FileStorage:
         self.__objects["{}.{}".format(obj.__class__.__name__, obj.id)] = obj
     """
     def save(self):
-        
         public instance that serializes
         objects to the json file
-        
         odict = FileStorage.__objects
         objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
         #  if os.path.exists(FileStorage.__file_path):
@@ -61,7 +57,7 @@ class FileStorage:
             new_dict[k] = v.to_dict()
         with open(self.__file_path, "w", encoding="UTF-8") as f:
             json.dump(new_dict, f)
-   
+  
     def reload(self):
         """
         deserializes the JSON file to __objects
@@ -74,4 +70,3 @@ class FileStorage:
                 self.__objects[k] = eval(class_name)(**v)
         except BaseException:
             pass
-    

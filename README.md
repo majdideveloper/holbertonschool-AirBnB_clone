@@ -40,9 +40,9 @@ The console is a command line interpreter that allow to manage of the backend of
 ### 💻Console Commands
 
  <h3 align="center"> How to Use Command </h3>
----
-| Commands  | Usage                                            | Description                                |
-|: -------- | :----------------------------------------------- | ------------------------------------------:|
+
+| Commands :| Usage                                            | Description                                |
+|: -------- | :----------------------------------------------- | :-----------------------------------------:|
 | `help`    | ```help ```                                      | displays all commands                      |
 | `create`  | ```create < class >```                           | creates new object                         |
 | `update`  | ``` update < class > <id> <attribute> <value>``` | updates attribute of an object             |
@@ -85,59 +85,59 @@ To use the command interpreter hbnb in an interactive mode:
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-zg5n">diractory</th>
-    <th class="tg-zg5n">subdir</th>
-    <th class="tg-zylj">file</th>
-    <th class="tg-zg5n">discription</th>
+    <th>Directory</th>
+    <th>Subdirectory</th>
+    <th class="tg-zylj">File</th>
+    <th class="tg-zg5n">Description</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-vw9p" rowspan="18">Hbnb</td>
-    <td class="tg-dvqx" colspan="2">console</td>
-    <td class="tg-oqs5"></td>
+    <td rowspan="18">Hbnb</td>
+    <td  colspan="2"><a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/console.py">console.py </a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-2t70" colspan="2">readme</td>
-    <td class="tg-ysfy"></td>
+    <td colspan="2">README.md</td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-vw9p" rowspan="7">Models</td>
-    <td class="tg-vw9p">base_model</td>
-    <td class="tg-vw9p"></td>
+    <td  rowspan="7"> <a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/tree/main/models"> Models</a> </td>
+    <td> <a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/base_model.py" > base_model.py </a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-ysfy">user</td>
-    <td class="tg-ysfy"></td>
+    <td> <a href= "https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/user.py">  user.py </a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-vw9p">amenity</td>
-    <td class="tg-vw9p"></td>
+    <td> <a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/amenity.py">amenity.py </a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-ysfy">city</td>
-    <td class="tg-ysfy"></td>
+    <td> <a href="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/city.py">city.py </a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-vw9p">place</td>
-    <td class="tg-vw9p"></td>
+    <td><a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/place.py">place.py</a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-ysfy">review</td>
-    <td class="tg-ysfy"></td>
+    <td><a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/review.py">review.py </a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-vw9p">__init__</td>
-    <td class="tg-vw9p"></td>
+    <td><a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/__init__.py">__init__.py</a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-ysfy" rowspan="2">Models/engine</td>
-    <td class="tg-ysfy">__init__</td>
-    <td class="tg-ysfy"></td>
+    <td rowspan="2"> <a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/tree/main/models/engine">Models/engine</a></td>
+    <td> <a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/engine/__init__.py">__init__.py </a></td>
+    <td></td>
   </tr>
   <tr>
-    <td class="tg-vw9p">file_storage</td>
-    <td class="tg-vw9p"></td>
+    <td><a href ="https://github.com/majdideveloper/holbertonschool-AirBnB_clone/blob/main/models/engine/file_storage.py">file_storage</a></td>
+    <td></td>
   </tr>
   <tr>
     <td class="tg-ysfy" rowspan="6">tests/test_model</td>

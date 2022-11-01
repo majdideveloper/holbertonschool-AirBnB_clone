@@ -13,6 +13,7 @@ class BaseModel():
     Class BaseModel that define all commun
     attribute methods for other class
     """
+    
 
     def __init__(self, *args, **kwargs):
         self.id = str(uuid.uuid4())
